@@ -7,11 +7,11 @@ const server = http.createServer((req,res) => {
             res.writeHead(200,{"Content-Type":"text/html; charset=utf-8"});
             res.write("<h2>İNDEX SAYFASINA HOŞ GELDİNİZ</h2>","utf-8");
     }   
-    else if(req.url === "hakkimda"){
+    else if(req.url === "/hakkimda"){
         res.writeHead(200,{"Content-Type":"text/html; charset=utf-8"});
         res.write("<h2>HAKKIMDA SAYFASINA HOŞ GELDİNİZ</h2>","utf-8");
     }
-    else if(req.url === "iletisim"){
+    else if(req.url === "/iletisim"){
         res.writeHead(200,{"Content-Type":"text/html; charset=utf-8"});
         res.write("<h2>İLETİŞİM SAYFASINA HOŞ GELDİNİZ</h2>","utf-8");
     }
@@ -24,5 +24,5 @@ const server = http.createServer((req,res) => {
 });
 
 server.listen(port, () =>{
-    console.log(`Sunucu port ${port} de başlıtıldı`);
+    console.log(`Sunucu port ${port} de başlatıldı`);
 });
